@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "f327d84e-54dc-4594-ae25-02e55261a9be",
+		"name": "GraphAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5219/UserManagerGraphAPI/Detail/fffb9b1f-854d-4612-a862-2abcae49a7b1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5219",
+					"path": [
+						"UserManagerGraphAPI",
+						"Detail",
+						"fffb9b1f-854d-4612-a862-2abcae49a7b1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5219/UserManagerGraphAPI/Users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5219",
+					"path": [
+						"UserManagerGraphAPI",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"AccountEnabled\": true,\r\n    \"DisplayName\":\"MyPostTestUser\",\r\n    \"MailNickname\":\"super\",\r\n    \"UserPrincipalName\": \"testuser1@sunitkanyan****.onmicrosoft.com\",\r\n    \"ForceChangePasswordNextSignIn\":true,\r\n    \"Password\": \"testpwd@123456@12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5219/UserManagerGraphAPI/Create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5219",
+					"path": [
+						"UserManagerGraphAPI",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateDetail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserId\":\"fffb9b1f-854d-4612-a862-2abcae49a7b1\",\r\n    \"Mobile\":\"9000000000\",\r\n    \"OfficeLocation\":\"India\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5219/UserManagerGraphAPI/UpdateMobile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5219",
+					"path": [
+						"UserManagerGraphAPI",
+						"UpdateMobile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddRoleAssignmentToUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserId\":\"9fe4636c-679b-4405-a343-f5d6a5ac6fc3\",\r\n    \"RoleId\":\"8b4f9e27-d9dc-4075-8a46-223b6b3c1236\",\r\n    \"ObjectIdApp\":\"15216253-b588-4cd1-a2f3-d89f007c1f4c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5219/UserManagerGraphAPI/AddRoleAssignmentToUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5219",
+					"path": [
+						"UserManagerGraphAPI",
+						"AddRoleAssignmentToUser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
