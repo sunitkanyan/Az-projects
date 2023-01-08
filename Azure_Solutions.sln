@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AZ_AD_graph_api", "AZ_AD_gr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Az-Ad-login", "Az-Ad-login\Az-Ad-login.csproj", "{CE440AB0-163A-4D37-8E83-77362043338B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Az_Web_app", "Az_Web_app\Az_Web_app.csproj", "{0C1413F7-05F9-4EBC-B194-B3FB5E72C347}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CE440AB0-163A-4D37-8E83-77362043338B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE440AB0-163A-4D37-8E83-77362043338B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE440AB0-163A-4D37-8E83-77362043338B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C1413F7-05F9-4EBC-B194-B3FB5E72C347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C1413F7-05F9-4EBC-B194-B3FB5E72C347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C1413F7-05F9-4EBC-B194-B3FB5E72C347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C1413F7-05F9-4EBC-B194-B3FB5E72C347}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
