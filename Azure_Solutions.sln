@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AZ_AD_graph_api", "AZ_AD_graph_api\AZ_AD_graph_api.csproj", "{19572589-8729-448F-94B8-6EAB7D056B48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19572589-8729-448F-94B8-6EAB7D056B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19572589-8729-448F-94B8-6EAB7D056B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19572589-8729-448F-94B8-6EAB7D056B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19572589-8729-448F-94B8-6EAB7D056B48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9A7B771-72D2-4870-B997-CEE709CE4D96}
+	EndGlobalSection
+EndGlobal
