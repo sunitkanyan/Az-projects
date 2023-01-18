@@ -8,8 +8,8 @@ string containerName = "testcnt";
 BlobContainerClient container = new BlobContainerClient("DefaultEndpointsProtocol=https;AccountName=myaccoiunt1234589;AccountKey=xwCC04RnTA4R2izqm7NdD0dwz1gaNhHBEyDQ16NUVWCuRDghN/2XLDmgPx0KgBnvhbe6nn+ZswLP+ASt+nZVOQ==;EndpointSuffix=core.windows.net", containerName);
 
 // Uploads the image to Blob storage.  If a blb already exists with this name it will be overwritten
-string blobName = "docs-and-friends-selfie-stick";
-string fileName = "docs-and-friends-selfie-stick.png";
+string blobName = "test";
+string fileName = "test.png";
 BlobClient blobClient = container.GetBlobClient(blobName);
 blobClient.Upload(fileName, true);
 

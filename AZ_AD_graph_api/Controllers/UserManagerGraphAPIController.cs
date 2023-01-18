@@ -145,7 +145,16 @@ namespace AZ_AD_graph_api.Controllers
           
             return Json(res);
         }
-
+        [HttpGet]
+        [Route("getapproles")]
+        public JsonResult GetAppRoles()
+        {
+            var app = GraphApiClient.GetGraphClient().Applications
+                .Request()
+                .GetAsync().Result;
+            return Json(app.Select(s => s.AppRoles.Select(m => new { Role = m.DisplayName,Id = m.Id })));
+            //response [[{"role":"Role4","id":"05350556-2ca4-45e1-ae5d-03727565f5d3"},{"role":"Role3","id":"377515e3-9ec7-46c6-a7f0-0d4b928e2cc5"},{"role":"Role2","id":"2dc11550-e0ca-42d4-b536-03622f91a629"},{"role":"Role1","id":"b0d99097-eaa1-4472-8988-88be0d14b0ac"}]]
+        }
 
     }
 }
