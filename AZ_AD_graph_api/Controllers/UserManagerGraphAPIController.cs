@@ -51,7 +51,6 @@ namespace AZ_AD_graph_api.Controllers
                     id = role.Id,
                     principleid = role.PrincipalId,
                     appRoleid = role.AppRoleId
-
                 });
             }
 

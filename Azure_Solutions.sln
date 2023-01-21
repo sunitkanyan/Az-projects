@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Az_Web_app", "Az_Web_app\Az
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Storage", "Storage", "{B2B40EA9-EBEA-485F-841A-E200866C9350}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureStorageRead", "AzureStorageRead\AzureStorageRead.csproj", "{379B884F-AEFD-429D-BDDC-0D20A631B5DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureStorageRead", "AzureStorageRead\AzureStorageRead.csproj", "{379B884F-AEFD-429D-BDDC-0D20A631B5DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "queuing", "queuing", "{3B2C6486-0852-4635-902F-BDD81E0A3F5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging", "Messaging\Messaging.csproj", "{B7D47ED9-6732-43F8-BADD-A26ED10FFB3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,12 +39,17 @@ Global
 		{379B884F-AEFD-429D-BDDC-0D20A631B5DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{379B884F-AEFD-429D-BDDC-0D20A631B5DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{379B884F-AEFD-429D-BDDC-0D20A631B5DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7D47ED9-6732-43F8-BADD-A26ED10FFB3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7D47ED9-6732-43F8-BADD-A26ED10FFB3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7D47ED9-6732-43F8-BADD-A26ED10FFB3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7D47ED9-6732-43F8-BADD-A26ED10FFB3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{379B884F-AEFD-429D-BDDC-0D20A631B5DE} = {B2B40EA9-EBEA-485F-841A-E200866C9350}
+		{B7D47ED9-6732-43F8-BADD-A26ED10FFB3F} = {3B2C6486-0852-4635-902F-BDD81E0A3F5A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D9A7B771-72D2-4870-B997-CEE709CE4D96}
