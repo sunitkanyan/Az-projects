@@ -15,9 +15,11 @@ namespace Messaging.Controllers
         public async Task SendMessageAsync(string newmessage)
         {
             //queue name: storagequeue
-            QueueClient queueClient = new QueueClient("DefaultEndpointsProtocol=https;AccountName=cloudshell1924384357;AccountKey=B/i63DLWD2+P7dIWmOiM9GACz8H7NG/PV1Pc6HAkOp9fqelrudFpwFyXYMgUacHm3RPLNpmTUQLQ+AStKn2p6w==;EndpointSuffix=core.windows.net", "storagequeue");
+            QueueClient queueClient = new QueueClient("Endpoint=sb://kanyan-service-bus-test.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=rr/1/IWLip3+y4ZjrlPqNwVUyjpCbAeSwWAN/nkghXE=", "storagequeue");
             await queueClient.CreateIfNotExistsAsync();
-
+            ServiceBusMessage message = new ServiceBusMessage(newmessage);
+            message.ApplicationProperties.Add("receiver", "sql"); //corres
+            message.Subject = "subject-test";
             await queueClient.SendMessageAsync(newmessage);
         }
     }
