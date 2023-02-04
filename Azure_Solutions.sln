@@ -37,6 +37,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "consoleapp_sendmessage_to S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "azfunc_servicebusqueue", "azfunc_servicebusqueue\azfunc_servicebusqueue.csproj", "{575425DE-DE3D-4ABC-A79C-524DD3CA11C8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CLI Commands", "CLI Commands", "{A92C9AE6-61FC-4A1F-BD5B-83C9FF3E42EF}"
+	ProjectSection(SolutionItems) = preProject
+		ServiceBus_CLI_Commands.txt = ServiceBus_CLI_Commands.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

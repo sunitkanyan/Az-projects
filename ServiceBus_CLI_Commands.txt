@@ -1,0 +1,162 @@
+az group show
+az group list
+
+--above to get resource group name if using sandbox 
+
+
+-- add service bus namespace
+az servicebus namespace create  --name "mybushskk" --resource-group "learn-a67f2434-f019-4406-b565-dc0670f06214" --location "westus" --sku Standard
+
+response: 
+{
+  "alternateName": null,
+  "createdAt": "2023-02-04T23:18:10.597000+00:00",
+  "disableLocalAuth": false,
+  "encryption": null,
+  "id": "/subscriptions/6b678711-e207-4bbe-bad3-cb45178f095c/resourceGroups/learn-a67f2434-f019-4406-b565-dc0670f06214/providers/Microsoft.ServiceBus/namespaces/mybushskk",
+  "identity": null,
+  "location": "West US",
+  "metricId": "6b678711-e207-4bbe-bad3-cb45178f095c:mybushskk",
+  "minimumTlsVersion": "1.2",
+  "name": "mybushskk",
+  "privateEndpointConnections": null,
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": "Enabled",
+  "resourceGroup": "learn-a67f2434-f019-4406-b565-dc0670f06214",
+  "serviceBusEndpoint": "https://mybushskk.servicebus.windows.net:443/",
+  "sku": {
+    "capacity": null,
+    "name": "Standard",
+    "tier": "Standard"
+  },
+  "status": "Active",
+  "systemData": null,
+  "tags": {},
+  "type": "Microsoft.ServiceBus/Namespaces",
+  "updatedAt": "2023-02-04T23:18:53.520000+00:00",
+  "zoneRedundant": false
+}
+
+
+--- create a queue
+az servicebus queue create  --resource-group "learn-a67f2434-f019-4406-b565-dc0670f06214" --namespace-name "mybushskk" --name "mycliqueue" --max-size 1024
+
+res:
+{
+  "accessedAt": "0001-01-01T00:00:00",
+  "autoDeleteOnIdle": "10675199 days, 2:48:05.477581",
+  "countDetails": {
+    "activeMessageCount": 0,
+    "deadLetterMessageCount": 0,
+    "scheduledMessageCount": 0,
+    "transferDeadLetterMessageCount": 0,
+    "transferMessageCount": 0
+  },
+  "createdAt": "2023-02-04T23:21:57.163000+00:00",
+  "deadLetteringOnMessageExpiration": false,
+  "defaultMessageTimeToLive": "10675199 days, 2:48:05.477581",
+  "duplicateDetectionHistoryTimeWindow": "0:10:00",
+  "enableBatchedOperations": true,
+  "enableExpress": false,
+  "enablePartitioning": false,
+  "forwardDeadLetteredMessagesTo": null,
+  "forwardTo": null,
+  "id": "/subscriptions/6b678711-e207-4bbe-bad3-cb45178f095c/resourceGroups/learn-a67f2434-f019-4406-b565-dc0670f06214/providers/Microsoft.ServiceBus/namespaces/mybushskk/queues/mycliqueue",
+  "location": "westus",
+  "lockDuration": "0:01:00",
+  "maxDeliveryCount": 10,
+  "maxMessageSizeInKilobytes": 256,
+  "maxSizeInMegabytes": 1024,
+  "messageCount": 0,
+  "name": "mycliqueue",
+  "requiresDuplicateDetection": false,
+  "requiresSession": false,
+  "resourceGroup": "learn-a67f2434-f019-4406-b565-dc0670f06214",
+  "sizeInBytes": 0,
+  "status": "Active",
+  "systemData": null,
+  "type": "Microsoft.ServiceBus/namespaces/queues",
+  "updatedAt": "2023-02-04T23:21:57.187000+00:00"
+}
+
+
+
+--- create a topic
+
+az servicebus topic create  --resource-group "learn-a67f2434-f019-4406-b565-dc0670f06214" --namespace-name "mybushskk" --name "myclitopic" --max-size 1024
+
+res:
+{
+  "accessedAt": "0001-01-01T00:00:00",
+  "autoDeleteOnIdle": "10675199 days, 2:48:05.477581",
+  "countDetails": {
+    "activeMessageCount": 0,
+    "deadLetterMessageCount": 0,
+    "scheduledMessageCount": 0,
+    "transferDeadLetterMessageCount": 0,
+    "transferMessageCount": 0
+  },
+  "createdAt": "2023-02-04T23:22:37.703000+00:00",
+  "defaultMessageTimeToLive": "10675199 days, 2:48:05.477581",
+  "duplicateDetectionHistoryTimeWindow": "0:10:00",
+  "enableBatchedOperations": true,
+  "enableExpress": false,
+  "enablePartitioning": false,
+  "id": "/subscriptions/6b678711-e207-4bbe-bad3-cb45178f095c/resourceGroups/learn-a67f2434-f019-4406-b565-dc0670f06214/providers/Microsoft.ServiceBus/namespaces/mybushskk/topics/myclitopic",
+  "location": "westus",
+  "maxMessageSizeInKilobytes": 256,
+  "maxSizeInMegabytes": 1024,
+  "name": "myclitopic",
+  "requiresDuplicateDetection": false,
+  "resourceGroup": "learn-a67f2434-f019-4406-b565-dc0670f06214",
+  "sizeInBytes": 0,
+  "status": "Active",
+  "subscriptionCount": 0,
+  "supportOrdering": true,
+  "systemData": null,
+  "type": "Microsoft.ServiceBus/namespaces/topics",
+  "updatedAt": "2023-02-04T23:22:37.727000+00:00"
+}
+
+
+
+--- create a subscriptions
+
+az servicebus topic subscription create  --resource-group "learn-a67f2434-f019-4406-b565-dc0670f06214" --namespace-name "mybushskk" --topic-name "myclitopic" --name "myclitopicsubscription"
+
+res:
+{
+  "accessedAt": "0001-01-01T00:00:00",
+  "autoDeleteOnIdle": "10675199 days, 2:48:05.477581",
+  "clientAffineProperties": null,
+  "countDetails": {
+    "activeMessageCount": 0,
+    "deadLetterMessageCount": 0,
+    "scheduledMessageCount": 0,
+    "transferDeadLetterMessageCount": 0,
+    "transferMessageCount": 0
+  },
+  "createdAt": "2023-02-04T23:23:39.241397+00:00",
+  "deadLetteringOnFilterEvaluationExceptions": true,
+  "deadLetteringOnMessageExpiration": false,
+  "defaultMessageTimeToLive": "10675199 days, 2:48:05.477581",
+  "duplicateDetectionHistoryTimeWindow": null,
+  "enableBatchedOperations": true,
+  "forwardDeadLetteredMessagesTo": null,
+  "forwardTo": null,
+  "id": "/subscriptions/6b678711-e207-4bbe-bad3-cb45178f095c/resourceGroups/learn-a67f2434-f019-4406-b565-dc0670f06214/providers/Microsoft.ServiceBus/namespaces/mybushskk/topics/myclitopic/subscriptions/myclitopicsubscription",
+  "isClientAffine": false,
+  "location": "westus",
+  "lockDuration": "0:01:00",
+  "maxDeliveryCount": 10,
+  "messageCount": 0,
+  "name": "myclitopicsubscription",
+  "requiresSession": false,
+  "resourceGroup": "learn-a67f2434-f019-4406-b565-dc0670f06214",
+  "status": "Active",
+  "systemData": null,
+  "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
+  "updatedAt": "2023-02-04T23:23:39.241397+00:00"
+}
+
+C:\Users\sk>
