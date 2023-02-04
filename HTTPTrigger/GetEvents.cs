@@ -41,6 +41,11 @@ namespace HTTPTrigger
                     SubscriptionValidationEventData _data = (SubscriptionValidationEventData)evn.Data;
                     log.LogInformation(_data.ToString());
 
+
+
+                    log.LogInformation(_data.ValidationCode);
+                    log.LogInformation(_data.ValidationUrl);
+
                     SubscriptionValidationResponse _response = new SubscriptionValidationResponse()
                     {
                         ValidationResponse = _data.ValidationCode
