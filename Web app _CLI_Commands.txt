@@ -1,0 +1,17 @@
+#create resource group
+
+az group create --name "myResourceGroup" --location "westus"
+
+#create app service plan  in 'Free' tier
+
+az appservice plan create --name "MyAppServicePlan" --resource-group "myResourceGroup" --sku FREE
+
+
+#create a webapp
+
+az webapp create --name "mywebapp" --resource-group "myResourceGroup" --plan "MyAppServicePlan"
+
+#deploy
+
+az webapp deployment source config  --name "mywebapp" --resource-group "MyResourceGroup" --repo-url repopath --branch master --manual-intergration
+

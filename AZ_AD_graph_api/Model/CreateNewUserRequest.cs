@@ -6,6 +6,10 @@
         public string DisplayName { get; set; }
         public string MailNickname { get; set; }
         public string UserPrincipalName { get; set; }
+        public string Mobile { get; set; }
+
+        public string AlternateEmailAddress { get; set; }
+
         public Boolean ForceChangePasswordNextSignIn { get; set; }
         public string Password { get; set; }
     }

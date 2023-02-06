@@ -14,7 +14,6 @@ namespace azfunc_servicebusqueue
         {
             log.LogInformation($"C# ServiceBus queue trigger function processed message: {myQueueItem}");
 
-            myQueueItem
 
 
         }

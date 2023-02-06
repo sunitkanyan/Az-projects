@@ -1,0 +1,23 @@
+# key vault
+
+az keyvault create --name "MyKeyVaultSkanyan" --resource-group "learn-db0bc1dd-6c8f-41c7-9184-dbd18995ed40" --location "eastus"
+
+az keyvault key create --vault-name "MyKeyVaultSkanyan" --name "myfirstkey" --protection software
+
+
+az keyvault secret set --vault-name "MyKeyVaultSkanyan" --name "SQLPassword" --value "1234"
+
+az keyvault key import --vault-name "MyKeyVaultSkanyan" --name "MyKeyVaultSkanyan" --pem-file "./softkey.pem" --pem-password "hVFkk965BuUv" --protection software
+
+
+
+az keyvault key import --vault-name "MyKeyVaultSkanyan" --name "MyKeyVaultSkanyan" --pem-file "C:\Program Files\Microsoft\Azure Functions Core Tools\workers\python\3.10\WINDOWS\X64\grpc\_cython\_credentials\roots.pem " --pem-password "1234" --protection software
+
+
+
+
+
+
+
+
+
