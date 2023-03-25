@@ -1,6 +1,8 @@
 az group show
 az group list
 
+update text to run action workflow from  github to azure devops
+
 --above to get resource group name if using sandbox 
 
 
