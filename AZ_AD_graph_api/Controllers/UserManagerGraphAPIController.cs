@@ -1,5 +1,6 @@
 ﻿using AZ_AD_graph_api.helpers;
 using AZ_AD_graph_api.Model;
+using ClassLibrary1;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Graph;
 
@@ -9,6 +10,24 @@ namespace AZ_AD_graph_api.Controllers
     [Route("UserManagerGraphAPI")]
     public class UserManagerGraphAPIController : Controller
     {
+
+        private readonly ILogger<UserManagerGraphAPIController> _logger;
+
+        private readonly INoSqlService _noSqlService;
+        public UserManagerGraphAPIController(ILogger<UserManagerGraphAPIController> logger, INoSqlService noSqlService) {
+            _logger = logger;
+            _noSqlService = noSqlService;
+            _noSqlService.SetConnection("connection1");
+            }
+        // GET: UserManagerGraphAPI
+        [HttpGet]
+        [Route("test")]
+        public JsonResult Test()
+        {
+            
+            return Json(_noSqlService.GetvalueConnectionString());
+        }
+
         // GET: UserManagerGraphAPI
         [HttpGet]
         [Route("Users")]
