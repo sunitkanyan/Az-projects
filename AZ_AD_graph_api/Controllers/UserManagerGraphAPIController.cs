@@ -23,8 +23,7 @@ namespace AZ_AD_graph_api.Controllers
         [HttpGet]
         [Route("test")]
         public JsonResult Test()
-        {
-            
+        {            
             return Json(_noSqlService.GetvalueConnectionString());
         }
 
