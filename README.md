@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/sunitkanyan/MyTest/_apis/build/status/sunitkanyan.Az-projects?branchName=master)](https://dev.azure.com/sunitkanyan/MyTest/_build/latest?definitionId=5&branchName=master)
+
 # Az-projects
 Azure learning and samples.
 
