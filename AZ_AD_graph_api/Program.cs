@@ -10,6 +10,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<INoSqlService, NoSqlService>();
 
+
 var app = builder.Build();
 
 // Add services to the container.

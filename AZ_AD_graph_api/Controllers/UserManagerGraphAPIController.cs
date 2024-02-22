@@ -18,13 +18,15 @@ namespace AZ_AD_graph_api.Controllers
             _logger = logger;
             _noSqlService = noSqlService;
             _noSqlService.SetConnection("connection1");
+            
             }
         // GET: UserManagerGraphAPI
         [HttpGet]
         [Route("test")]
         public JsonResult Test()
         {            
-            return Json(_noSqlService.GetvalueConnectionString());
+           // return Json(_noSqlService.GetvalueConnectionString());
+            return Json(_noSqlService.GetConnectionobj());
         }
 
         // GET: UserManagerGraphAPI

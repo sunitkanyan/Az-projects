@@ -6,5 +6,7 @@ namespace ClassLibrary1
     {
         public string GetvalueConnectionString();
         public void SetConnection(string conType);
+
+        public DataConnections GetConnectionobj();
     }
 }
