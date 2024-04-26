@@ -44,7 +44,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CLI Commands", "CLI Command
 		Web app _CLI_Commands.txt = Web app _CLI_Commands.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{8BB5D0E5-8EB2-4E49-B6C4-89BD29426C34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{8BB5D0E5-8EB2-4E49-B6C4-89BD29426C34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C#_Interview_Prep", "C#_Interview_Prep", "{C1D0E341-D0F5-43D6-98FF-73016D5B36B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "readme", "readme", "{B002BDBC-5A50-4CAB-B1B4-68907EC4B20F}"
+	ProjectSection(SolutionItems) = preProject
+		01_c#_SolidPrinciple.md = 01_c#_SolidPrinciple.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -122,6 +129,7 @@ Global
 		{34C2A1F6-11B8-4287-85CE-500862FE7CD0} = {D77DFC18-4B05-461B-9977-56105F7D41F1}
 		{5F9E20D4-0D07-4FAC-8A4E-27DD4B5D13F1} = {437B3179-002C-4B16-9170-67C4D7BAFCD7}
 		{575425DE-DE3D-4ABC-A79C-524DD3CA11C8} = {D77DFC18-4B05-461B-9977-56105F7D41F1}
+		{B002BDBC-5A50-4CAB-B1B4-68907EC4B20F} = {C1D0E341-D0F5-43D6-98FF-73016D5B36B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D9A7B771-72D2-4870-B997-CEE709CE4D96}
