@@ -142,3 +142,27 @@ response
 
 
 
+
+update attribute in cognito
+
+var credentials = new BasicAWSCredentials("your_access_key", "your_secret_key");
+var client = new AmazonCognitoIdentityProviderClient(credentials, Amazon.RegionEndpoint.AFSouth1);
+
+var request = new AdminUpdateUserAttributesRequest
+{
+    UserPoolId = "your_user_pool_id",
+    Username = "username_of_the_user",
+    UserAttributes = new List<AttributeType>
+    {
+        new AttributeType { Name = "custom:myCustomAttribute", Value = "new_value" }
+        // Add other attributes as needed
+    }
+};
+
+
+var response = await client.AdminUpdateUserAttributesAsync(request);
+
+if (response.HttpStatusCode == System.Net.HttpStatusCode.OK)
+{
+    Console.WriteLine("update success");
+}
