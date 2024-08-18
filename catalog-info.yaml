@@ -1,10 +1,43 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: Az-projects
-  annotations:
-    github.com/project-slug: sunitkanyan/Az-projects
+  name: Az-projects-skanyan
+  description: this service is just for learning purpose.
+  labels:
+    team: my-team-skanyan
 spec:
-  type: other
-  lifecycle: unknown
-  owner: sunitkanyan
+  type: service
+  lifecycle: testing
+  owner: skanyan
+  system: my-interview
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: MSSQL
+  description: Database system to perform crud
+  labels:
+    team: my-team-skanyan
+spec:
+  type: database
+  lifecycle: production
+  owner: skanyan
+  system: my-interview
+
+  ---
+
+apiVersion: backstage.io/v1alpha1
+kind: service
+metadata:
+  name: AAD
+  description: Azure active directory
+  labels:
+    team: my-team-skanyan
+spec:
+  type: service
+  lifecycle: production
+  owner: skanyan
+  system: my-interview
+
