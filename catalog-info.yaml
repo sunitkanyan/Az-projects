@@ -19,14 +19,8 @@ metadata:
   name: MSSQL
   description: Database system to perform crud
   labels:
-    team: my-team-skanyan
-spec:
-  type: database
-  lifecycle: production
-  owner: skanyan
-  system: my-interview
-
-  ---
+    team: my-team-skanyan-
+---
 
 apiVersion: backstage.io/v1alpha1
 kind: service
