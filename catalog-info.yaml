@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Az-projects
+  annotations:
+    github.com/project-slug: sunitkanyan/Az-projects
+spec:
+  type: other
+  lifecycle: unknown
+  owner: sunitkanyan
